@@ -1,0 +1,28 @@
+#include<iostream>
+#include<cmath>
+#include<ctime>
+using namespace std;
+
+
+int main(){
+    srand(time(NULL));
+    
+    int num_computer=rand()%1000000;
+    //cout<<num_computer<<endl;
+    
+    cout<<"Enter your number(six digits): ";
+    int num_user;
+    cin>>num_user;
+    if(num_user==num_computer){
+        cout<<"Result matched!"<<endl;
+    }else{
+        cout<<"User's input: "<<num_user<<endl;
+        cout<<"Computer generated output: "<<num_computer<<endl;
+        cout<<"Result not matched!"<<endl;
+    }
+    //Calculating probability
+    int total_ways=10*10*10*10*10*10;
+    double probability= 1.0/total_ways;
+    cout<<"Winning probability is: "<<probability<<endl;
+    return 0;
+}
